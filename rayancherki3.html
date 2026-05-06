@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosidades | Rayan Cherki</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #050a14;
+            --card-bg: #112240;
+            --neon-pink: #ff0055;
+            --neon-blue: #64ffda;
+            --text-silver: #ccd6f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Header con efecto Neón --- */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, #000, var(--bg-dark));
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: white;
+            text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink);
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* --- Tarjetas de Curiosidades --- */
+        .card {
+            background: var(--card-bg);
+            padding: 35px;
+            margin: 30px 0;
+            border-radius: 20px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-pink);
+        }
+
+        h2 {
+            color: var(--neon-blue);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            color: var(--text-silver);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        li::before {
+            content: "✦";
+            color: var(--neon-pink);
+            font-weight: bold;
+        }
+
+        /* --- Sección de Vídeos (Adaptada para Premier League) --- */
+        .video-description {
+            margin-bottom: 20px;
+            color: var(--text-silver);
+        }
+
+        .video-player-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Relación 16:9 */
+            background-color: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(255, 0, 85, 0.3);
+            cursor: pointer;
+        }
+
+        .video-thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Imagen de fondo genérica de fútbol para la miniatura */
+            background: url('https://resources.premierleague.com/premierleague/photo/2024/01/10/cherki-style.jpg') center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .video-thumbnail::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .video-thumbnail:hover::before {
+            background: rgba(255, 0, 85, 0.3);
+        }
+
+        .play-btn {
+            position: relative;
+            z-index: 2;
+            font-size: 5rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .video-thumbnail:hover .play-btn {
+            transform: scale(1.1);
+            color: var(--neon-pink);
+        }
+
+        .video-label {
+            position: relative;
+            z-index: 2;
+            margin-top: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+
+        /* --- Botón Volver --- */
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--neon-pink);
+            text-decoration: none;
+            border: 2px solid var(--neon-pink);
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            background: var(--neon-pink);
+            color: white;
+            box-shadow: 0 0 20px var(--neon-pink);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #444;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .card { padding: 25px 20px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Secretos de un Crack</h1>
+</header>
+
+<div class="container">
+
+    <!-- Sección de Curiosidades -->
+    <div class="card">
+        <h2><i class="fas fa-bolt"></i> ¿Sabías que...?</h2>
+        <ul>
+            <li>
+                <div>
+                    <strong>Dominio Total:</strong> Es uno de los pocos jugadores en el mundo capaz de conducir, regatear y disparar con la misma precisión usando ambas piernas.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <strong>Precocidad Histórica:</strong> Su talento era tan obvio que debutó en el primer equipo del Lyon con solo 16 años y 2 meses.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <strong>Recordman Europeo:</strong> Se convirtió en el goleador más joven de la historia del Lyon en competiciones europeas.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <strong>Fidelidad a sus raíces:</strong> Entró en la academia del Lyon a los 7 años, pasando por todas las categorías inferiores como la joya de la corona.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <strong>El Heredero:</strong> Muchos analistas lo comparan con una mezcla entre Hazard y Benzema por su control de balón.
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Sección de Vídeos con enlace real a la Premier League -->
+    <div class="card">
+        <h2><i class="fas fa-play-circle"></i> Análisis en Vídeo</h2>
+        <p class="video-description">Haz clic en el reproductor para ver los mejores momentos de Cherki esta temporada en el sitio oficial de la Premier League.</p>
+
+        <!-- Al hacer clic en este contenedor, vas al sitio real -->
+        <a href="https://www.premierleague.com/video/single/4630936" target="_blank" style="text-decoration: none;">
+            <div class="video-player-container">
+                <div class="video-thumbnail">
+                    <i class="fas fa-play play-btn"></i>
+                    <span class="video-label">VER EN PREMIER LEAGUE</span>
+                </div>
+                <!-- Iframe invisible para SEO y referencia -->
+                <iframe src="https://www.premierleague.com/video/single/4630936" style="display:none;" allowfullscreen></iframe>
+            </div>
+        </a>
+
+        <p style="margin-top: 20px; font-size: 0.85rem; color: #8892b0; font-style: italic;">
+            * Nota: Por políticas de derechos de autor, el vídeo se abrirá directamente en la plataforma oficial de la Premier League para asegurar la máxima calidad.
+        </p>
+    </div>
+
+    <!-- Navegación -->
+    <div style="text-align: center;">
+        <a href="index.html" class="btn-back">
+            <i class="fas fa-chevron-left"></i> Volver al panel principal
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Página Oficial de Rayan Cherki. Diseñado por Jorge Mocholí Pérez.</p>
+</footer>
+
+</body>
+</html>
