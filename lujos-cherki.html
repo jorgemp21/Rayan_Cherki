@@ -63,6 +63,58 @@
             margin-bottom: 12px;
         }
 
+        .lux-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .lux-gallery figure {
+            position: relative;
+            overflow: hidden;
+            border-radius: 14px;
+            background: #0f172a;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+            min-height: 220px;
+        }
+
+        .lux-gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.35s ease;
+        }
+
+        .lux-gallery figure:hover img { transform: scale(1.06); }
+
+        .lux-gallery figcaption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px 12px;
+            font-size: 0.88rem;
+            color: #fff;
+            background: linear-gradient(transparent, rgba(0,0,0,0.75));
+        }
+
+        .vitrina {
+            margin-top: 18px;
+            background: linear-gradient(120deg, #0d1b2a 0%, #1b263b 60%, #415a77 100%);
+            color: #fff;
+            border-radius: 14px;
+            padding: 16px;
+            border: 2px solid rgba(244, 197, 66, 0.4);
+        }
+
+        .vitrina h3 {
+            color: #f8d76b;
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
         .note {
             background: #fff8e0;
             border: 1px solid #f4c542;
@@ -117,6 +169,32 @@
                 <li>Perfil de garaje con modelos deportivos y SUV premium.</li>
                 <li>Posibles marcas en su colección: <strong>Mercedes-AMG, Audi RS y Range Rover</strong>.</li>
             </ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-camera-retro"></i> Galería de lujos</h2>
+            <div class="lux-gallery">
+                <figure>
+                    <img src="imagenes/cherki111.jpg" alt="Entrada de vivienda de lujo estilo moderno">
+                    <figcaption>Entrada principal con diseño elegante.</figcaption>
+                </figure>
+                <figure>
+                    <img src="imagenes/cherki222.jpg" alt="Coche deportivo de lujo en exposición">
+                    <figcaption>Deportivo premium para uso diario y eventos.</figcaption>
+                </figure>
+                <figure>
+                    <img src="imagenes/cherki333.jpg" alt="Interior de casa de lujo con acabados modernos">
+                    <figcaption>Interior moderno con acabados de alta gama.</figcaption>
+                </figure>
+                <figure>
+                    <img src="imagenes/cherki444.jpg" alt="Ambiente VIP y lifestyle exclusivo">
+                    <figcaption>Ambiente VIP para escapadas y momentos top.</figcaption>
+                </figure>
+            </div>
+            <div class="vitrina">
+                <h3><i class="fas fa-gem"></i> Vitrina exclusiva</h3>
+                <p>Una vitrina estilo showroom con piezas premium: relojes, sneakers limitadas y accesorios de diseñador, con iluminación LED para un toque todavía más "chulo".</p>
+            </div>
         </section>
 
         <section class="card">
