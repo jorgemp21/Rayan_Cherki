@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lujos de Rayan Cherki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #64ffda;
+            --accent: #f4c542;
+            --bg: #f0f2f5;
+            --card: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: #1c1c1c;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        header h1 { font-size: 3rem; margin-bottom: 10px; }
+        header p { color: var(--secondary); }
+
+        .container { max-width: 1100px; margin: -40px auto 40px; padding: 0 20px; }
+
+        .card {
+            background: var(--card);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        ul { list-style: none; }
+
+        li {
+            background: #f9fafb;
+            border-left: 5px solid var(--accent);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+        }
+
+        .note {
+            background: #fff8e0;
+            border: 1px solid #f4c542;
+            color: #5f4a00;
+            border-radius: 12px;
+            padding: 14px;
+            font-size: 0.95rem;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 10px;
+            text-decoration: none;
+            background: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .btn-back:hover { background: #112240; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lujos de Rayan Cherki</h1>
+        <p>Estilo de vida premium: propiedades, coches y gustos exclusivos</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2><i class="fas fa-map-marker-alt"></i> ¿Dónde vive?</h2>
+            <ul>
+                <li>Residencia principal estimada en la zona de <strong>Manchester</strong>, cerca de la ciudad deportiva.</li>
+                <li>Conexión frecuente con <strong>Lyon</strong>, ciudad donde creció y mantiene vínculos personales.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-house"></i> Casa y valor aproximado</h2>
+            <ul>
+                <li>Vivienda moderna de alto nivel con seguridad privada, gimnasio y zona de recuperación.</li>
+                <li>Valor estimado de la casa: entre <strong>2,5 y 4 millones de euros</strong>, según zona y extras.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-car-side"></i> Coches de lujo</h2>
+            <ul>
+                <li>Perfil de garaje con modelos deportivos y SUV premium.</li>
+                <li>Posibles marcas en su colección: <strong>Mercedes-AMG, Audi RS y Range Rover</strong>.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-gem"></i> Otros lujos</h2>
+            <ul>
+                <li>Relojería de gama alta y moda de diseñador.</li>
+                <li>Viajes privados, escapadas exclusivas y experiencias VIP.</li>
+            </ul>
+            <p class="note"><strong>Nota:</strong> Esta sección es de carácter informativo y estimativo; los importes exactos y propiedades privadas no suelen publicarse oficialmente.</p>
+            <a class="btn-back" href="index.html"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+        </section>
+    </main>
+</body>
+</html>
